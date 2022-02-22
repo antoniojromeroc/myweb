@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Compiled and minified CSS Materializecss.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <!-- <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet"> -->
+
+    <title>{% block title %}{% endblock %}</title>
+    <!-- <link href="{% static 'css/bootstrap5-1-3.min.css' %}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/myblog.css' %}"> -->
+    
+    <!-- Template Stylesheet -->
+    <!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"> -->
+</head>
+<body>
+
+    <!-- Responsive Navbar -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+            </div>
+        </nav>            
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+    </ul>
+
+    <!-- Parallax -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="{% static 'img/portfolioPortada.jpg' %}"></div>
+    </div>
+    
+    <div class="row container">
+        <div class="col s3"></div>
+        <div class="col s6">
+            <div class="card horizontal">
+                <div class="col s6">
+                    <img src="{% static 'img/perfilAjr.jpg' %}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                  </div>
+                <!-- <div class="card-image">
+                    <img src="{% static 'img/perfilAjr.jpg' %}" class="circle responsive-img" width = "100%" height = "100%">
+                </div> -->
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+        <!-- <img class="activator" src="images/office.jpg"> -->
+        </div>
+        <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+        </div>
+        <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+    </div>
+            
+            
+  
+    <div class="container py-4">
+        {% block body %}
+        {% endblock %}
+    </div>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+
+    <script src="{% static 'js/bootstrap5-1-3.js' %}"></script>   
+    <script src="{% static 'js/gestionCursos.js' %}"></script>  -->
+
+    <!-- JavaScript Libraries -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script> -->
+
+    <!-- Template Javascript -->
+    <!-- <script src="{% static 'js/main.js' %}"></script> -->
+    <script src="{% static 'js/initializations.js' %}"></script>
+    
+</body>
+</html>
